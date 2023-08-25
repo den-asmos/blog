@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 import { Routes, Route } from 'react-router-dom';
+import { Header } from './components';
+
+const AppColumn = styled.div`
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 1000px;
+	min-height: 100%;
+	background: #fff;
+`;
 
 const Content = styled.div`
 	padding: 120px 0;
@@ -9,17 +20,13 @@ const H2 = styled.h2`
 	text-align: center;
 `;
 
-const Header = () => {
-	return <div>Header</div>;
-};
-
 const Footer = () => {
 	return <div>Footer</div>;
 };
 
 const App = () => {
 	return (
-		<>
+		<AppColumn>
 			<Header />
 			<Content>
 				<H2>Page Content</H2>
@@ -34,7 +41,7 @@ const App = () => {
 				</Routes>
 			</Content>
 			<Footer />
-		</>
+		</AppColumn>
 	);
 };
 
