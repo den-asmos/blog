@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Routes, Route } from 'react-router-dom';
-import { Header } from './components';
+import { Header, Footer } from './components';
 
 const AppColumn = styled.div`
 	margin: 0 auto;
@@ -8,7 +8,7 @@ const AppColumn = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	width: 1000px;
-	min-height: 100%;
+	min-height: 100vh;
 	background: #fff;
 `;
 
@@ -19,10 +19,6 @@ const Content = styled.div`
 const H2 = styled.h2`
 	text-align: center;
 `;
-
-const Footer = () => {
-	return <div>Footer</div>;
-};
 
 const App = () => {
 	return (
