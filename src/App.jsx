@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components';
-import { Auth } from './pages';
+import { Auth, Registration } from './pages';
 
 const AppColumn = styled.div`
 	margin: 0 auto;
@@ -25,7 +25,7 @@ const App = () => {
 				<Routes>
 					<Route path="/" element={<div>Main Page</div>} />
 					<Route path="/login" element={<Auth />} />
-					<Route path="/register" element={<div>Register Page</div>} />
+					<Route path="/register" element={<Registration />} />
 					<Route path="/users" element={<div>Users Page</div>} />
 					<Route path="/post/:postId" element={<div>Post Page</div>} />
 					<Route path="/post" element={<div>New Post Page</div>} />
