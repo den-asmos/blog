@@ -18,10 +18,6 @@ const RightAligned = styled.div`
 	gap: 1rem;
 `;
 
-const StyledIcon = styled.div`
-	cursor: pointer;
-`;
-
 const StyledLogout = styled.div`
 	display: flex;
 	justify-content: space-between;
@@ -48,17 +44,18 @@ const ControlPanelContainer = ({ className }) => {
 					) : (
 						<StyledLogout>
 							<div>{login}</div>
-							<StyledIcon onClick={() => dispatch(logout(session))}>
-								<Icon id="fa-sign-out" size="25px" />
-							</StyledIcon>
+
+							<Icon
+								id="fa-sign-out"
+								size="25px"
+								onClick={() => dispatch(logout(session))}
+							/>
 						</StyledLogout>
 					)}
 				</>
 			</RightAligned>
 			<RightAligned>
-				<StyledIcon onClick={() => navigate(-1)}>
-					<Icon id="fa-angle-left" size="30px" />
-				</StyledIcon>
+				<Icon id="fa-angle-left" size="30px" onClick={() => navigate(-1)} />
 				<Link to="/post">
 					<Icon id="fa-file-o" size="20px" />
 				</Link>

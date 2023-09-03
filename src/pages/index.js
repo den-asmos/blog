@@ -1,4 +1,5 @@
 import Auth from './Auth';
 import Registration from './Registration';
+import Users from './Users';
 
-export { Auth, Registration };
+export { Auth, Registration, Users };
