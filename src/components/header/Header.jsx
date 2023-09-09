@@ -30,6 +30,7 @@ const Header = styled(HeaderContainer)`
 	background: #fff;
 	box-shadow: 0 0 15px #000;
 	position: fixed;
+	z-index: 10;
 `;
 
 export default Header;

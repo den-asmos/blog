@@ -1,7 +1,10 @@
-import styled from 'styled-components';
+import { useLayoutEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
+import { setUser } from './redux/actions';
 import { Header, Footer } from './components';
-import { Auth, Registration, Users } from './pages';
+import { Auth, Registration, Users, Post } from './pages';
+import styled from 'styled-components';
 
 const AppColumn = styled.div`
 	margin: 0 auto;
@@ -14,10 +17,22 @@ const AppColumn = styled.div`
 `;
 
 const Page = styled.div`
-	padding: 120px 0;
+	padding: 120px 0 20px;
 `;
 
 const App = () => {
+	const dispatch = useDispatch();
+
+	useLayoutEffect(() => {
+		const currentUserData = JSON.parse(sessionStorage.getItem('userData'));
+
+		if (!currentUserData) {
+			return;
+		}
+
+		dispatch(setUser({ ...currentUserData, roleId: Number(currentUserData.roleId) }));
+	}, [dispatch]);
+
 	return (
 		<AppColumn>
 			<Header />
@@ -27,7 +42,7 @@ const App = () => {
 					<Route path="/login" element={<Auth />} />
 					<Route path="/register" element={<Registration />} />
 					<Route path="/users" element={<Users />} />
-					<Route path="/post/:postId" element={<div>Post Page</div>} />
+					<Route path="/post/:id" element={<Post />} />
 					<Route path="/post" element={<div>New Post Page</div>} />
 					<Route path="*" element={<div>Error Page</div>} />
 				</Routes>

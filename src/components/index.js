@@ -8,5 +8,22 @@ import FormError from './FormError';
 import UserRow from './users-table/UserRow';
 import TableRow from './users-table/TableRow';
 import Content from './Content';
+import PostContent from './post/PostContent';
+import Comments from './post/Comments';
+import Comment from './post/Comment';
 
-export { Header, Footer, Input, Button, H2, Icon, FormError, UserRow, TableRow, Content };
+export {
+	Header,
+	Footer,
+	Input,
+	Button,
+	H2,
+	Icon,
+	FormError,
+	UserRow,
+	TableRow,
+	Content,
+	PostContent,
+	Comments,
+	Comment,
+};

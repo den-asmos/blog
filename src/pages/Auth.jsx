@@ -66,6 +66,7 @@ const AuthContainer = ({ className }) => {
 			}
 
 			dispatch(setUser(response));
+			sessionStorage.setItem('userData', JSON.stringify(response));
 		});
 	};
 

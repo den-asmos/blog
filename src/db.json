@@ -105,5 +105,55 @@
       "published_at": "2032-10-11"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2050-05-06 06:33",
+      "content": "Hello",
+      "id": 1
+    },
+    {
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2051-05-12 17:26",
+      "content": "Good",
+      "id": 2
+    }
+  ],
+  "sessions": [
+    {
+      "hash": "0.94547603245234168589661294390680268406867980957031",
+      "user": {
+        "id": "001",
+        "login": "fedor",
+        "password": "qwerty777",
+        "registeredAt": "2033-09-22",
+        "roleId": 0
+      },
+      "id": 1
+    },
+    {
+      "hash": "0.67756290239286487420145022042561322450637817382813",
+      "user": {
+        "id": "001",
+        "login": "fedor",
+        "password": "qwerty777",
+        "registeredAt": "2033-09-22",
+        "roleId": 0
+      },
+      "id": 2
+    },
+    {
+      "hash": "0.68784763345095378817006803728872910141944885253906",
+      "user": {
+        "id": "001",
+        "login": "fedor",
+        "password": "qwerty777",
+        "registeredAt": "2033-09-22",
+        "roleId": 0
+      },
+      "id": 3
+    }
+  ]
 }
