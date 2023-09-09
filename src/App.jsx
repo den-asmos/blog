@@ -2,7 +2,7 @@ import { useLayoutEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import { setUser } from './redux/actions';
-import { Header, Footer } from './components';
+import { Header, Footer, Modal } from './components';
 import { Auth, Registration, Users, Post } from './pages';
 import styled from 'styled-components';
 
@@ -48,6 +48,8 @@ const App = () => {
 				</Routes>
 			</Page>
 			<Footer />
+
+			<Modal />
 		</AppColumn>
 	);
 };

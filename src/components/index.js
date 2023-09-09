@@ -11,6 +11,7 @@ import Content from './Content';
 import PostContent from './post/PostContent';
 import Comments from './post/Comments';
 import Comment from './post/Comment';
+import Modal from './Modal';
 
 export {
 	Header,
@@ -26,4 +27,5 @@ export {
 	PostContent,
 	Comments,
 	Comment,
+	Modal,
 };

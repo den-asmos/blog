@@ -1,7 +1,26 @@
+import { useDispatch } from 'react-redux';
+import { removeCommentAsync, openModal, CLOSE_MODAL } from '../../redux/actions';
+import { useServerRequest } from '../../hooks';
 import Icon from '../Icon';
 import styled from 'styled-components';
 
-const CommentContainer = ({ id, author, content, publishedAt, className }) => {
+const CommentContainer = ({ id, postId, author, content, publishedAt, className }) => {
+	const dispatch = useDispatch();
+	const requestServer = useServerRequest();
+
+	const onCommentRemove = (id) => {
+		dispatch(
+			openModal({
+				text: 'Удалить комментарий?',
+				onConfirm: () => {
+					dispatch(removeCommentAsync(requestServer, postId, id));
+					dispatch(CLOSE_MODAL);
+				},
+				onCancel: () => dispatch(CLOSE_MODAL),
+			}),
+		);
+	};
+
 	return (
 		<div className={className}>
 			<div className="comment">
@@ -17,7 +36,7 @@ const CommentContainer = ({ id, author, content, publishedAt, className }) => {
 				</div>
 				<div className="comment-text">{content}</div>
 			</div>
-			<Icon id="fa-trash-o" size="18px" />
+			<Icon id="fa-trash-o" size="18px" onClick={() => onCommentRemove(id)} />
 		</div>
 	);
 };

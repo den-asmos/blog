@@ -105,22 +105,7 @@
       "published_at": "2032-10-11"
     }
   ],
-  "comments": [
-    {
-      "author_id": "001",
-      "post_id": "001",
-      "published_at": "2050-05-06 06:33",
-      "content": "Hello",
-      "id": 1
-    },
-    {
-      "author_id": "001",
-      "post_id": "001",
-      "published_at": "2051-05-12 17:26",
-      "content": "Good",
-      "id": 2
-    }
-  ],
+  "comments": [],
   "sessions": [
     {
       "hash": "0.94547603245234168589661294390680268406867980957031",
