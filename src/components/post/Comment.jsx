@@ -36,7 +36,12 @@ const CommentContainer = ({ id, postId, author, content, publishedAt, className 
 				</div>
 				<div className="comment-text">{content}</div>
 			</div>
-			<Icon id="fa-trash-o" size="18px" onClick={() => onCommentRemove(id)} />
+			<Icon
+				id="fa-trash-o"
+				size="18px"
+				isBtn={true}
+				onClick={() => onCommentRemove(id)}
+			/>
 		</div>
 	);
 };

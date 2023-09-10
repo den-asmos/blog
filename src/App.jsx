@@ -44,7 +44,7 @@ const App = () => {
 					<Route path="/users" element={<Users />} />
 					<Route path="/post/:id" element={<Post />} />
 					<Route path="/post/:id/edit" element={<Post />} />
-					<Route path="/post" element={<div>New Post Page</div>} />
+					<Route path="/post" element={<Post />} />
 					<Route path="*" element={<div>Error Page</div>} />
 				</Routes>
 			</Page>

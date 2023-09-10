@@ -30,6 +30,7 @@ const CommentsContainer = ({ comments, className, postId }) => {
 				<Icon
 					id="fa-paper-plane-o"
 					size="18px"
+					isBtn={true}
 					onClick={() => onNewCommentAdd(userId, postId, newComment)}
 				/>
 			</div>

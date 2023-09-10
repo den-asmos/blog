@@ -1,16 +1,44 @@
+import { useDispatch } from 'react-redux';
+import { useServerRequest } from '../../hooks';
+import { openModal, removePostAsync, CLOSE_MODAL } from '../../redux/actions';
+import { useNavigate } from 'react-router-dom';
 import Icon from '../Icon';
 import styled from 'styled-components';
 
-const SpecialPanelContainer = ({ className, publishedAt, EditBtn }) => {
+const SpecialPanelContainer = ({ className, publishedAt, EditBtn, id }) => {
+	const dispatch = useDispatch();
+	const requestServer = useServerRequest();
+	const navigate = useNavigate();
+
+	const onPostRemove = (id) => {
+		dispatch(
+			openModal({
+				text: 'Удалить статью?',
+				onConfirm: () => {
+					dispatch(removePostAsync(requestServer, id)).then(() => navigate('/'));
+					dispatch(CLOSE_MODAL);
+				},
+				onCancel: () => dispatch(CLOSE_MODAL),
+			}),
+		);
+	};
+
 	return (
 		<div className={className}>
 			<div className="published-at">
-				<Icon id="fa-calendar" size="18px" />
+				{publishedAt && <Icon id="fa-calendar" size="18px" />}
 				{publishedAt}
 			</div>
 			<div className="btns">
 				{EditBtn}
-				<Icon id="fa-trash-o" size="18px" onClick={() => {}} />
+				{publishedAt && (
+					<Icon
+						id="fa-trash-o"
+						size="18px"
+						isBtn={true}
+						onClick={() => onPostRemove(id)}
+					/>
+				)}
 			</div>
 		</div>
 	);

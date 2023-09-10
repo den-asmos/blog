@@ -50,18 +50,18 @@ const ControlPanelContainer = ({ className }) => {
 						<StyledLogout>
 							<div>{login}</div>
 
-							<Icon id="fa-sign-out" size="25px" onClick={onLogout} />
+							<Icon id="fa-sign-out" size="25px" isBtn={true} onClick={onLogout} />
 						</StyledLogout>
 					)}
 				</>
 			</RightAligned>
 			<RightAligned>
-				<Icon id="fa-angle-left" size="30px" onClick={() => navigate(-1)} />
+				<Icon id="fa-angle-left" size="30px" isBtn={true} onClick={() => navigate(-1)} />
 				<Link to="/post">
-					<Icon id="fa-file-o" size="20px" />
+					<Icon id="fa-file-o" size="20px" isBtn={true} />
 				</Link>
 				<Link to="/users">
-					<Icon id="fa-users" size="20px" />
+					<Icon id="fa-users" size="20px" isBtn={true} />
 				</Link>
 			</RightAligned>
 		</div>

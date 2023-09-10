@@ -47,13 +47,14 @@ const UserRowContainer = ({
 					<Icon
 						id="fa-floppy-o"
 						size="25px"
+						isBtn={true}
 						onClick={() => onRoleSave(id, selectedRoleId)}
 						disabled={isSaveBtnDisabled}
 					/>
 				</div>
 			</TableRow>
 
-			<Icon id="fa-trash-o" size="25px" onClick={onUserRemove} />
+			<Icon id="fa-trash-o" size="25px" isBtn={true} onClick={onUserRemove} />
 		</div>
 	);
 };

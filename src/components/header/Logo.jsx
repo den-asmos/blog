@@ -16,7 +16,7 @@ const SmallText = styled.div`
 const LogoConainer = ({ className }) => {
 	return (
 		<Link to="/" className={className}>
-			<Icon id="fa-code" size="90px" />
+			<Icon id="fa-code" size="90px" isBtn={true} />
 			<div>
 				<LargeText>Блог</LargeText>
 				<SmallText>веб-разработчика</SmallText>

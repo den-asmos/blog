@@ -11,7 +11,7 @@ const IconContainer = ({ className, id, onClick }) => {
 const Icon = styled(IconContainer)`
 	font-size: ${({ size = '20px' }) => size};
 	color: ${({ disabled }) => (disabled ? '#ccc' : '#000')};
-	cursor: pointer;
+	cursor: ${({ isBtn }) => (isBtn ? 'pointer' : 'default')};
 `;
 
 export default Icon;
