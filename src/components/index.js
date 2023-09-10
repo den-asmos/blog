@@ -11,6 +11,7 @@ import Content from './Content';
 import PostContent from './post/PostContent';
 import Comments from './post/Comments';
 import Comment from './post/Comment';
+import PostForm from './post/PostForm';
 import Modal from './Modal';
 
 export {
@@ -27,5 +28,6 @@ export {
 	PostContent,
 	Comments,
 	Comment,
+	PostForm,
 	Modal,
 };
