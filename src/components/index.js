@@ -13,6 +13,7 @@ import Comments from './post/Comments';
 import Comment from './post/Comment';
 import PostForm from './post/PostForm';
 import Modal from './Modal';
+import PostCard from './PostCard';
 
 export {
 	Header,
@@ -30,4 +31,5 @@ export {
 	Comment,
 	PostForm,
 	Modal,
+	PostCard,
 };
