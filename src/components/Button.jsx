@@ -17,10 +17,10 @@ const Button = styled(ButtonContainer)`
 	font-size: 1rem;
 	outline: none;
 	transition: 0.2s ease-in-out;
-	cursor: pointer;
+	cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
 
 	&:hover {
-		scale: 1.1;
+		scale: ${({ disabled }) => (disabled ? '' : '1.1')};
 	}
 `;
 

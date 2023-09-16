@@ -14,6 +14,7 @@ import Comment from './post/Comment';
 import PostForm from './post/PostForm';
 import Modal from './Modal';
 import PostCard from './PostCard';
+import Pagination from './Pagination';
 
 export {
 	Header,
@@ -32,4 +33,5 @@ export {
 	PostForm,
 	Modal,
 	PostCard,
+	Pagination,
 };
