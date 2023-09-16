@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Icon from './Icon';
+import Icon from '../Icon';
 import styled from 'styled-components';
 
 const PostCardContainer = ({

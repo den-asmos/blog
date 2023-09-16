@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from './Button';
+import Button from '../Button';
 
 const PaginationContainer = ({ className, page, lastPage, setPage }) => {
 	return (
@@ -22,11 +22,12 @@ const PaginationContainer = ({ className, page, lastPage, setPage }) => {
 };
 
 const Pagination = styled(PaginationContainer)`
-	margin-top: 2rem;
 	display: flex;
 	justify-content: center;
 	gap: 1rem;
 	width: 85%;
+	position: absolute;
+	bottom: 140px;
 
 	& .current-page {
 		padding: 0.5rem 1rem;

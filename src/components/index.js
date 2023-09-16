@@ -13,8 +13,9 @@ import Comments from './post/Comments';
 import Comment from './post/Comment';
 import PostForm from './post/PostForm';
 import Modal from './Modal';
-import PostCard from './PostCard';
-import Pagination from './Pagination';
+import PostCard from './main/PostCard';
+import Pagination from './main/Pagination';
+import Search from './main/Search';
 
 export {
 	Header,
@@ -34,4 +35,5 @@ export {
 	Modal,
 	PostCard,
 	Pagination,
+	Search,
 };
