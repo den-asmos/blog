@@ -3,6 +3,7 @@ import SpecialPanel from './SpecialPanel';
 import H2 from '../H2';
 import Icon from '../Icon';
 import styled from 'styled-components';
+import { PROP_TYPES } from '../../constants';
 
 const PostContentContainer = ({
 	post: { id, title, imageUrl, content, publishedAt },
@@ -50,5 +51,9 @@ const PostContent = styled(PostContentContainer)`
 		white-space: pre-line;
 	}
 `;
+
+PostContent.propTypes = {
+	post: PROP_TYPES.POST.isRequired,
+};
 
 export default PostContent;

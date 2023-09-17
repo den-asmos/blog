@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useServerRequest } from '../../hooks';
 import { selectUserId, selectUserRole } from '../../redux/selectors';
 import { addCommentAsync } from '../../redux/actions';
-import { ROLES } from '../../constants';
+import { PROP_TYPES, ROLES } from '../../constants';
 import Icon from '../Icon';
 import Comment from './Comment';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const CommentsContainer = ({ comments, className, postId }) => {
@@ -80,5 +81,10 @@ const Comments = styled(CommentsContainer)`
 		outline: none;
 	}
 `;
+
+Comments.propTypes = {
+	comments: PropTypes.arrayOf(PROP_TYPES.COMMENT).isRequired,
+	postId: PropTypes.string.isRequired,
+};
 
 export default Comments;

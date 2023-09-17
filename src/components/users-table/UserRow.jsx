@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { useServerRequest } from '../../hooks';
 import Icon from '../Icon';
 import TableRow from './TableRow';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { PROP_TYPES } from '../../constants';
 
 const UserRowContainer = ({
 	className,
@@ -73,5 +75,14 @@ const UserRow = styled(UserRowContainer)`
 		font-size: 1rem;
 	}
 `;
+
+UserRow.propTypes = {
+	id: PropTypes.string.isRequired,
+	login: PropTypes.string.isRequired,
+	registeredAt: PropTypes.string.isRequired,
+	roleId: PROP_TYPES.ROLE_ID.isRequired,
+	roles: PropTypes.arrayOf(PROP_TYPES.ROLE).isRequired,
+	onUserRemove: PropTypes.func.isRequired,
+};
 
 export default UserRow;

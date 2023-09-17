@@ -8,6 +8,7 @@ import SpecialPanel from './SpecialPanel';
 import Icon from '../Icon';
 import Input from '../Input';
 import styled from 'styled-components';
+import { PROP_TYPES } from '../../constants';
 
 const PostFormContainer = ({
 	post: { id, title, imageUrl, content, publishedAt },
@@ -96,5 +97,9 @@ const PostForm = styled(PostFormContainer)`
 		border-radius: 0.5rem;
 	}
 `;
+
+PostForm.propTypes = {
+	post: PROP_TYPES.POST.isRequired,
+};
 
 export default PostForm;

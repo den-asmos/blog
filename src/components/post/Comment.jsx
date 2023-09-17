@@ -4,8 +4,9 @@ import { selectUserRole } from '../../redux/selectors';
 import { useServerRequest } from '../../hooks';
 import { checkAccess } from '../../utils';
 import Icon from '../Icon';
-import styled from 'styled-components';
 import { ROLES } from '../../constants';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const CommentContainer = ({ id, postId, author, content, publishedAt, className }) => {
 	const dispatch = useDispatch();
@@ -89,5 +90,13 @@ const Comment = styled(CommentContainer)`
 		margin-top: 10px;
 	}
 `;
+
+Comment.propTypes = {
+	postId: PropTypes.string.isRequired,
+	id: PropTypes.number.isRequired,
+	author: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+};
 
 export default Comment;

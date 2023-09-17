@@ -6,6 +6,7 @@ import { selectUserRole } from '../../redux/selectors';
 import { checkAccess } from '../../utils';
 import { ROLES } from '../../constants';
 import Icon from '../Icon';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const SpecialPanelContainer = ({ className, publishedAt, EditBtn, id }) => {
@@ -73,5 +74,11 @@ const SpecialPanel = styled(SpecialPanelContainer)`
 		gap: 0.5rem;
 	}
 `;
+
+SpecialPanel.propTypes = {
+	id: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+	EditBtn: PropTypes.node.isRequired,
+};
 
 export default SpecialPanel;

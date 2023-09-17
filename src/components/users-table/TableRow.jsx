@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const TableRowContainer = ({ children, className }) => {
@@ -27,5 +28,9 @@ const TableRow = styled(TableRowContainer)`
 		align-items: center;
 	}
 `;
+
+TableRow.propTypes = {
+	children: PropTypes.node.isRequired,
+};
 
 export default TableRow;
