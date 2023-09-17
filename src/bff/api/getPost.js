@@ -1,8 +1,19 @@
 import { transformPost } from '../transformers';
 
 export const getPost = async (postId) => {
-	const response = await fetch(`http://localhost:7070/posts/${postId}`);
-	const post = await response.json();
+	return fetch(`http://localhost:7070/posts/${postId}`)
+		.then((response) => {
+			if (response.ok) {
+				return response;
+			}
 
-	return post && transformPost(post);
+			const error =
+				response.status === 404
+					? 'Такая страница не существует'
+					: 'Что-то пошло не так...';
+
+			return Promise.reject(error);
+		})
+		.then((response) => response.json())
+		.then((post) => post && transformPost(post));
 };

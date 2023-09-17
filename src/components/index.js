@@ -7,7 +7,7 @@ import Icon from './Icon';
 import FormError from './FormError';
 import UserRow from './users-table/UserRow';
 import TableRow from './users-table/TableRow';
-import Content from './Content';
+import PrivateContent from './PrivateContent';
 import PostContent from './post/PostContent';
 import Comments from './post/Comments';
 import Comment from './post/Comment';
@@ -16,6 +16,7 @@ import Modal from './Modal';
 import PostCard from './main/PostCard';
 import Pagination from './main/Pagination';
 import Search from './main/Search';
+import Error from './Error';
 
 export {
 	Header,
@@ -27,7 +28,7 @@ export {
 	FormError,
 	UserRow,
 	TableRow,
-	Content,
+	PrivateContent,
 	PostContent,
 	Comments,
 	Comment,
@@ -36,4 +37,5 @@ export {
 	PostCard,
 	Pagination,
 	Search,
+	Error,
 };

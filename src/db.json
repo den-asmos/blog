@@ -12,7 +12,7 @@
       "login": "den",
       "password": "123456",
       "registered_at": "2033-09-22",
-      "role_id": 0
+      "role_id": 1
     },
     {
       "login": "mur",
@@ -205,6 +205,28 @@
         "roleId": 0
       },
       "id": 7
+    },
+    {
+      "hash": "0.95186323165626263165250975362141616642475128173828",
+      "user": {
+        "id": "001",
+        "login": "fedor",
+        "password": "qwerty777",
+        "registeredAt": "2033-09-22",
+        "roleId": 0
+      },
+      "id": 8
+    },
+    {
+      "hash": "0.16218088306356548411457652036915533244609832763672",
+      "user": {
+        "id": "002",
+        "login": "den",
+        "password": "123456",
+        "registeredAt": "2033-09-22",
+        "roleId": 1
+      },
+      "id": 9
     }
   ]
 }
