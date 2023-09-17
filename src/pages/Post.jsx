@@ -1,12 +1,12 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { useMatch, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { PostContent, Comments, PostForm, Error, PrivateContent } from '../components';
-import { useServerRequest } from '../hooks';
 import { loadPostAsync, RESET_POST_DATA } from '../redux/actions';
 import { selectPost } from '../redux/selectors';
-import styled from 'styled-components';
+import { useServerRequest } from '../hooks';
 import { ROLES } from '../constants';
+import { PostContent, Comments, PostForm, Error, PrivateContent } from '../components';
+import styled from 'styled-components';
 
 const PostContainer = ({ className }) => {
 	const [error, setError] = useState(null);

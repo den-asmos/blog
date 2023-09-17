@@ -36,6 +36,7 @@ const Pagination = styled(PaginationContainer)`
 		align-items: center;
 		border: 1px solid #000;
 		border-radius: 0.5rem;
+		background: #fff;
 	}
 `;
 

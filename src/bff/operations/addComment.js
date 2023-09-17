@@ -1,4 +1,5 @@
-import { createComment, getPost, getComments } from '../api';
+import { createComment, getPost } from '../api';
+import { getCommentsWithAuthor } from '../utils/getCommentsWithAuthor';
 import { sessions } from '../sessions';
 import { ROLES } from '../constants';
 
@@ -16,7 +17,7 @@ export const addComment = async (hash, userId, postId, content) => {
 	await createComment(userId, postId, content);
 
 	const post = await getPost(postId);
-	const comments = await getComments(postId);
+	const comments = await getCommentsWithAuthor(postId);
 
 	return {
 		error: null,

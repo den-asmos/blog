@@ -121,11 +121,18 @@
   ],
   "comments": [
     {
-      "author_id": "001",
+      "author_id": "002",
       "post_id": "002",
-      "published_at": "2039-11-02 01:31",
-      "content": "Good",
-      "id": 1
+      "published_at": "2044-04-25 07:13",
+      "content": "Awesome)",
+      "id": 2
+    },
+    {
+      "author_id": "4Zm4wEX",
+      "post_id": "002",
+      "published_at": "2049-10-16 11:43",
+      "content": "Very good)",
+      "id": 3
     }
   ],
   "sessions": [
@@ -218,13 +225,13 @@
       "id": 8
     },
     {
-      "hash": "0.16218088306356548411457652036915533244609832763672",
+      "hash": "0.65893835057868122007107558602001518011093139648438",
       "user": {
-        "id": "002",
-        "login": "den",
-        "password": "123456",
+        "id": "001",
+        "login": "fedor",
+        "password": "qwerty777",
         "registeredAt": "2033-09-22",
-        "roleId": 1
+        "roleId": 0
       },
       "id": 9
     }
